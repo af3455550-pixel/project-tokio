@@ -1,0 +1,57 @@
+{
+  "weapons": [
+    {
+      "id": "ink_blaster",
+      "name": "Ink Blaster",
+      "fireCooldown": 0.16,
+      "hasCharged": true,
+      "chargeTime": 0.45,
+      "energyOnHit": 2,
+      "shot": {
+        "id": "ink",
+        "vfx": "ink",
+        "speed": 460,
+        "life": 1.2,
+        "radius": 4,
+        "damage": 1,
+        "knockback": 150,
+        "pierce": 0,
+        "ricochet": 0,
+        "parryable": false,
+        "score": 10
+      },
+      "charged": {
+        "id": "ink_charged",
+        "vfx": "ink_charged",
+        "speed": 660,
+        "life": 1.0,
+        "radius": 6,
+        "damage": 2,
+        "knockback": 280,
+        "pierce": 1,
+        "score": 20
+      }
+    },
+    {
+      "id": "paper_fan",
+      "name": "Paper Fan",
+      "fireCooldown": 0.2,
+      "hasCharged": false,
+      "chargeTime": 0,
+      "energyOnHit": 1,
+      "shot": {
+        "id": "paper",
+        "vfx": "paper",
+        "speed": 380,
+        "life": 0.7,
+        "radius": 5,
+        "damage": 1,
+        "knockback": 220,
+        "pierce": 0,
+        "spreadDeg": 24,
+        "count": 3,
+        "score": 10
+      }
+    }
+  ]
+}

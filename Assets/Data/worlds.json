@@ -1,0 +1,85 @@
+{
+  "worlds": [
+    {
+      "id": "meadows",
+      "name": "The Whispering Fields",
+      "subtitle": "World 1",
+      "description": "Where the film first tore. Wind, straw, and old harvest gods.",
+      "sky": "#9FC7E8",
+      "ground": "#5F7F38",
+      "accent": "#F2CE6B",
+      "music": "meadows",
+      "bossId": "barnaby",
+      "bossName": "Barnaby Patchface",
+      "levels": [
+        { "id": "meadows_01", "name": "The Whispering Fields", "file": "Levels/meadows_01.lvl" },
+        { "id": "meadows_02", "name": "The Barn", "file": "Levels/meadows_02.lvl" }
+      ]
+    },
+    {
+      "id": "harbor",
+      "name": "Salt & String",
+      "subtitle": "World 2",
+      "description": "A drowned docktown where reels rust in the tide pools.",
+      "sky": "#BDE3F5",
+      "ground": "#7A9E7C",
+      "accent": "#7FD4FF",
+      "music": "meadows",
+      "bossId": "",
+      "bossName": "",
+      "levels": []
+    },
+    {
+      "id": "orchard",
+      "name": "The Rotten Orchard",
+      "subtitle": "World 3",
+      "description": "Apple trees that fruit in ink. The cider press never stops.",
+      "sky": "#F2D9A8",
+      "ground": "#8C8678",
+      "accent": "#C8452E",
+      "music": "meadows",
+      "bossId": "",
+      "bossName": "",
+      "levels": []
+    },
+    {
+      "id": "clockworks",
+      "name": "Clockworks County",
+      "subtitle": "World 4",
+      "description": "Gear towns that run the projector on steam. Everything ticks.",
+      "sky": "#E2D9C8",
+      "ground": "#8A6B45",
+      "accent": "#E8B84B",
+      "music": "meadows",
+      "bossId": "",
+      "bossName": "",
+      "levels": []
+    },
+    {
+      "id": "opera",
+      "name": "The Hollow Opera",
+      "subtitle": "World 5",
+      "description": "An opera house that plays itself, audience of shadows.",
+      "sky": "#3A3153",
+      "ground": "#241E33",
+      "accent": "#BFE3FF",
+      "music": "meadows",
+      "bossId": "",
+      "bossName": "",
+      "levels": []
+    },
+    {
+      "id": "studio",
+      "name": "Studio Zero",
+      "subtitle": "Final World",
+      "description": "The projection room at the end of the reel.",
+      "sky": "#17131F",
+      "ground": "#241E33",
+      "accent": "#7FD4FF",
+      "music": "meadows",
+      "bossId": "patch",
+      "bossName": "The Patch",
+      "levels": []
+    }
+  ]
+}

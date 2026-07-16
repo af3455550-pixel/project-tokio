@@ -1,0 +1,21 @@
+# Build trees
+build/
+out/
+cmake-build-*/
+
+# Runtime data (saves are user-local, never committed)
+saves/
+*.save
+
+# QA scratch (screenshots / captures)
+.qa/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.vs/
+.idea/
+*.user
+
+# unit-test scratch saves
+inktest_saves_*/
