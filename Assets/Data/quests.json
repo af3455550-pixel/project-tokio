@@ -1,0 +1,40 @@
+{
+  "quests": [
+    {
+      "id": "q_first_blood",
+      "title": "First Splash",
+      "desc": "Defeat any enemy.",
+      "objective": { "type": "kills", "target": "", "count": 1 },
+      "rewardCoins": 20
+    },
+    {
+      "id": "q_coin_hoarder",
+      "title": "Pocket Full of Ink",
+      "desc": "Collect 15 coins.",
+      "objective": { "type": "coins", "target": "", "count": 15 },
+      "rewardCoins": 30,
+      "rewardCharm": "inkwell_lid"
+    },
+    {
+      "id": "q_parry_artist",
+      "title": "Metronome Hands",
+      "desc": "Parry 3 attacks.",
+      "objective": { "type": "parries", "target": "", "count": 3 },
+      "rewardCharm": "thread_gloves"
+    },
+    {
+      "id": "q_film_reel",
+      "title": "Reel Recovery",
+      "desc": "Recover 3 film strips.",
+      "objective": { "type": "collect", "target": "film", "count": 3 },
+      "rewardCoins": 50
+    },
+    {
+      "id": "q_barnaby",
+      "title": "Harvest Over",
+      "desc": "Defeat Barnaby Patchface.",
+      "objective": { "type": "boss", "target": "barnaby", "count": 1 },
+      "rewardCharm": "straw_vest"
+    }
+  ]
+}

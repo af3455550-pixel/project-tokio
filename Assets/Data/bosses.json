@@ -1,0 +1,52 @@
+{
+  "bosses": [
+    {
+      "id": "patchling",
+      "name": "The Patchling",
+      "sprite": "patch",
+      "music": "patch",
+      "maxHp": 26,
+      "w": 30, "h": 44,
+      "score": 400,
+      "energyOnKill": 20,
+      "introTime": 2.0,
+      "defeatTime": 1.8,
+      "miniBoss": true,
+      "phases": [
+        { "hpFrac": 0.55, "musicLayer": 1, "label": "SEWN TIGHT" }
+      ]
+    },
+    {
+      "id": "barnaby",
+      "name": "Barnaby Patchface",
+      "sprite": "barnaby",
+      "music": "barnaby",
+      "maxHp": 90,
+      "w": 44, "h": 60,
+      "score": 2000,
+      "energyOnKill": 40,
+      "introTime": 2.6,
+      "defeatTime": 2.4,
+      "phases": [
+        { "hpFrac": 0.66, "musicLayer": 1, "label": "HARVEST TIME" },
+        { "hpFrac": 0.33, "musicLayer": 2, "label": "THE STORM REAPES" }
+      ]
+    },
+    {
+      "id": "patch",
+      "name": "The Patch",
+      "sprite": "patch",
+      "music": "barnaby",
+      "maxHp": 140,
+      "w": 36, "h": 52,
+      "score": 4000,
+      "energyOnKill": 60,
+      "introTime": 3.0,
+      "defeatTime": 2.8,
+      "phases": [
+        { "hpFrac": 0.66, "musicLayer": 1, "label": "UNFINISHED DRAFT" },
+        { "hpFrac": 0.33, "musicLayer": 2, "label": "FINAL CUT" }
+      ]
+    }
+  ]
+}

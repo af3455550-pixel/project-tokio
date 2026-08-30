@@ -1,0 +1,30 @@
+{
+  "achievements": [
+    { "id": "ach_first_blood", "name": "First Splash", "desc": "Defeat your first enemy.", "type": 0 },
+    { "id": "ach_slime_splash", "name": "Puddle Punter", "desc": "Defeat 10 Slomes.", "type": 1, "target": "slome", "amount": 10 },
+    { "id": "ach_bat_bash", "name": "Night Shift", "desc": "Defeat 10 Inkbats.", "type": 1, "target": "inkbat", "amount": 10 },
+    { "id": "ach_gunner_down", "name": "Crossed Quills", "desc": "Defeat 5 QuillGunners.", "type": 1, "target": "quillgunner", "amount": 5 },
+    { "id": "ach_clearing", "name": "Clearing", "desc": "Defeat 25 enemies.", "type": 2, "amount": 25 },
+    { "id": "ach_parry_1", "name": "On the Beat", "desc": "Parry 1 attack.", "type": 3, "amount": 1 },
+    { "id": "ach_parry_10", "name": "Swing Set", "desc": "Parry 10 attacks.", "type": 3, "amount": 10 },
+    { "id": "ach_parry_25", "name": "Metronome", "desc": "Parry 25 attacks.", "type": 3, "amount": 25 },
+    { "id": "ach_coins_100", "name": "Ink Riches", "desc": "Collect 100 coins.", "type": 4, "amount": 100 },
+    { "id": "ach_coins_300", "name": "The Safe", "desc": "Collect 300 coins.", "type": 4, "amount": 300 },
+    { "id": "ach_super_1", "name": "Inkstorm", "desc": "Unleash your first super.", "type": 5, "amount": 1 },
+    { "id": "ach_super_5", "name": "Weather System", "desc": "Unleash 5 supers.", "type": 5, "amount": 5 },
+    { "id": "ach_barnaby", "name": "Harvest Over", "desc": "Defeat Barnaby Patchface.", "type": 7, "target": "barnaby" },
+    { "id": "ach_barnaby_s", "name": "Oscar Season", "desc": "Rank S+ on Barnaby.", "type": 8, "target": "barnaby|S+" },
+    { "id": "ach_barnaby_nohit", "name": "Untouched Reel", "desc": "Beat Barnaby without damage.", "type": 9, "target": "barnaby" },
+    { "id": "ach_barnaby_time", "name": "Short Film", "desc": "Beat Barnaby under 90 seconds.", "type": 10, "target": "barnaby", "amount": 90 },
+    { "id": "ach_level_nohit", "name": "Clean Take", "desc": "Clear a level without damage.", "type": 12, "target": "meadows_01" },
+    { "id": "ach_level_time", "name": "Quick Cut", "desc": "Clear Meadows 1 under 2 minutes.", "type": 11, "target": "meadows_01", "amount": 120 },
+    { "id": "ach_quests_3", "name": "Side Story", "desc": "Complete 3 quests.", "type": 13, "amount": 3 },
+    { "id": "ach_films_3", "name": "Reel Collector", "desc": "Recover 3 film strips.", "type": 16, "target": "film", "amount": 3 },
+    { "id": "ach_frames_1", "name": "Projector Memory", "desc": "Find a master frame.", "type": 16, "target": "frame", "amount": 1 },
+    { "id": "ach_stamp_1", "name": "Approved", "desc": "Find a Director's Stamp.", "type": 16, "target": "stamp", "amount": 1, "secret": true },
+    { "id": "ach_death_1", "name": "Torn Reel", "desc": "Die once (sorry).", "type": 6, "amount": 1 },
+    { "id": "ach_kill_100", "name": "Reel Grinder", "desc": "Defeat 100 enemies.", "type": 2, "amount": 100 },
+    { "id": "ach_clears_2", "name": "Double Feature", "desc": "Clear 2 levels.", "type": 17, "amount": 2 },
+    { "id": "ach_weapon_2", "name": "Ammunition", "desc": "Own 2 weapons.", "type": 14, "amount": 2 }
+  ]
+}

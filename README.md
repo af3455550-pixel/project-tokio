@@ -239,3 +239,11 @@ nomes e composições são marcas e obras originais da Fire State Studios.*
 **🎬 FIM DA BOBINA 🎬**
 
 </div>
+
+---
+
+## 🛠️ Desenvolvimento (build, controlos, QA)
+
+Instruções completas de build (Windows MSVC/MinGW e Linux), tabela de controlos,
+arquitetura, testes e o harness de QA headless estão em
+[`docs/DEVELOPMENT.md`](docs/DEVELOPMENT.md).

@@ -1,0 +1,20 @@
+{
+  "npcs": [
+    {
+      "id": "birdie",
+      "lines": [
+        { "speaker": "Birdie", "text": "You're the new projectionist! The fields are full of loose frames." },
+        { "speaker": "Birdie", "text": "Mind the slimes — they love a good splash. Parry their lunge and they turn to puddles." },
+        { "speaker": "Birdie", "text": "The big scarecrow in the barn... he thinks he's still on set. Don't let him believe it." }
+      ]
+    },
+    {
+      "id": "owl",
+      "lines": [
+        { "speaker": "Inkwell Owl", "text": "The last reel is torn, child. Every world is losing its picture." },
+        { "speaker": "Inkwell Owl", "text": "Recover the master frames. They are the projector's memory." },
+        { "speaker": "Inkwell Owl", "text": "When Barnaby falls, the barn door opens. Then... the projector itself will wake." }
+      ]
+    }
+  ]
+}

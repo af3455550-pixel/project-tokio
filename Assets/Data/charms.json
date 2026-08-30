@@ -1,0 +1,34 @@
+{
+  "charms": [
+    {
+      "id": "echo_heart",
+      "name": "Echo Heart",
+      "desc": "Once per level, survive a fatal blow.",
+      "mods": { "reviveOnce": true }
+    },
+    {
+      "id": "straw_vest",
+      "name": "Straw Vest",
+      "desc": "+1 max HP, but you move 8% slower.",
+      "mods": { "maxHpAdd": 1, "moveSpeedMul": 0.92 }
+    },
+    {
+      "id": "swift_boot",
+      "name": "Swift Boot",
+      "desc": "12% faster, dash recovers 20% quicker.",
+      "mods": { "moveSpeedMul": 1.12, "dashCooldownMul": 0.8 }
+    },
+    {
+      "id": "inkwell_lid",
+      "name": "Inkwell Lid",
+      "desc": "Gain energy 25% faster.",
+      "mods": { "energyGainMul": 1.25 }
+    },
+    {
+      "id": "thread_gloves",
+      "name": "Thread Gloves",
+      "desc": "Damage 15% up; damage taken 10% up.",
+      "mods": { "damageMul": 1.15, "dmgTakenMul": 1.1 }
+    }
+  ]
+}
