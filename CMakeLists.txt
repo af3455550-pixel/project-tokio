@@ -13,11 +13,6 @@
 cmake_minimum_required(VERSION 3.16)
 project(inkbound VERSION 0.1.0 LANGUAGES C CXX)
 
-# TEMP diagnostics probe (removed before final)
-message("::error::WINPROBE cmake=${CMAKE_VERSION}")
-message("::error::PROBE-CONFIG cmake=${CMAKE_VERSION} gen=${CMAKE_GENERATOR} id=${CMAKE_CXX_COMPILER_ID} ver=${CMAKE_CXX_COMPILER_VERSION} os=${CMAKE_SYSTEM_NAME} proc=${CMAKE_SYSTEM_PROCESSOR}")
-message("::error::PROBE-FLAVORS cfgtypes=${CMAKE_CONFIGURATION_TYPES} buildtype=${CMAKE_BUILD_TYPE}")
-
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
@@ -30,10 +25,15 @@ set_property(CACHE CMAKE_BUILD_TYPE PROPERTY STRINGS Debug Development Release S
 
 # Per-flavour flags (single-config generators use CMAKE_BUILD_TYPE;
 # multi-config generators such as Visual Studio use the standard configs).
-set(CMAKE_CXX_FLAGS_DEBUG        "-O0 -g3")
-set(CMAKE_CXX_FLAGS_DEVELOPMENT  "-O2 -g")
-set(CMAKE_CXX_FLAGS_RELEASE      "-O2")
-set(CMAKE_CXX_FLAGS_SHIPPING     "-O3")
+if(MSVC)
+    # MSVC uses its own optimized/Debug defaults (/O2, /Zi); keep them.
+    set(CMAKE_CXX_FLAGS_RELEASE "")
+else()
+    set(CMAKE_CXX_FLAGS_DEBUG        "-O0 -g3")
+    set(CMAKE_CXX_FLAGS_DEVELOPMENT  "-O2 -g")
+    set(CMAKE_CXX_FLAGS_RELEASE      "-O2")
+    set(CMAKE_CXX_FLAGS_SHIPPING     "-O3")
+endif()
 
 if(MSVC)
     add_compile_options(/W4 /permissive- /Zc:__cplusplus)
@@ -47,7 +47,6 @@ if(INK_SDL2_PREFIX)
     list(PREPEND CMAKE_PREFIX_PATH "${INK_SDL2_PREFIX}")
 endif()
 find_package(SDL2 CONFIG QUIET)
-message("::error::PROBE-SDL found=${SDL2_FOUND} ver=${SDL2_VERSION} dir=${SDL2_DIR} prefix=${INK_SDL2_PREFIX}")
 if(NOT SDL2_FOUND)
     message(FATAL_ERROR
         "SDL2 not found. Install SDL2 (>= 2.26) or pass -DINK_SDL2_PREFIX=/path/to/sdl2.")
@@ -131,49 +130,5 @@ if(INK_WITH_TESTS)
     add_test(NAME unit COMMAND inkbound-tests)
 endif()
 
-# TEMP CI probe: syntax-check every translation unit at configure time and
-# surface the first failure as check annotations (run only when not the app
-# build so we can read the GitHub Actions errors).
-if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
-    get_target_property(_ink_sdl_inc SDL2::SDL2 INTERFACE_INCLUDE_DIRECTORIES)
-    set(_probe_dirs
-        Core Physics AI Animation VFX
-        Gameplay Player Enemies Bosses Weapons Charms Levels World Save
-        Cinematics Progression Quests Dialogue
-        Art Audio Engine Input Rendering Tools UI Game)
-    if(INK_WITH_TESTS)
-        list(APPEND _probe_dirs Tests)
-    endif()
-    set(_probe_srcs "")
-    foreach(_d IN LISTS _probe_dirs)
-        file(GLOB _tmp ${CMAKE_SOURCE_DIR}/Source/${_d}/*.cpp)
-        list(APPEND _probe_srcs ${_tmp})
-    endforeach()
-    list(APPEND _probe_srcs ${CMAKE_SOURCE_DIR}/Source/Editor/main.cpp)
-    foreach(_src IN LISTS _probe_srcs)
-        execute_process(
-            COMMAND ${CMAKE_CXX_COMPILER} -std=c++20 -fsyntax-only
-                    -I${CMAKE_SOURCE_DIR}/Source -I${_ink_sdl_inc}
-                    -DINK_ASSERTS=1 -DINK_DEVTOOLS=1 ${_src}
-            RESULT_VARIABLE _probe_r
-            OUTPUT_VARIABLE _probe_o
-            ERROR_VARIABLE _probe_e)
-        if(NOT _probe_r EQUAL 0)
-            message("::error::PROBE-FAILED ${_src}")
-            if(NOT _probe_shown)
-                string(REPLACE "\n" ";" _probe_lines "${_probe_e}${_probe_o}")
-                set(_n 0)
-                foreach(_probe_line IN LISTS _probe_lines)
-                    if(_n LESS 12)
-                        message("::error::${_probe_line}")
-                    endif()
-                    math(EXPR _n "${_n}+1")
-                endforeach()
-                set(_probe_shown 1)
-            endif()
-        endif()
-    endforeach()
-    message("::error::PROBE-DONE")
-endif()
 
 message(STATUS "INKBOUND configured: SDL2 ${SDL2_VERSION}, flavour ${CMAKE_BUILD_TYPE}")

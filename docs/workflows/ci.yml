@@ -11,6 +11,8 @@ jobs:
   # ---------------------------------------------------------------- Linux ----
   linux:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4
       - name: Install dependencies
@@ -25,8 +27,13 @@ jobs:
         run: ctest --test-dir build --output-on-failure
 
   # -------------------------------------------------------------- Windows ----
+  # NOTE: `windows-latest` now runs Windows Server 2025 with Visual Studio
+  # 2026 (18.x) — the "Visual Studio 17 2022" generator no longer exists on
+  # that image. See actions/runner-images#14017.
   windows-x64:
     runs-on: windows-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
 
@@ -37,7 +44,7 @@ jobs:
 
       - name: Configure (Release, x64)
         run: >
-          cmake -B build -G "Visual Studio 17 2022" -A x64
+          cmake -B build -G "Visual Studio 18 2026" -A x64
           -DCMAKE_BUILD_TYPE=Release
           -DINK_SDL2_PREFIX=C:/vcpkg/installed/x64-windows
         shell: cmd
