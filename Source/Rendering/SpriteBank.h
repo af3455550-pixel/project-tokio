@@ -3,6 +3,7 @@
 // single texture atlas (§8). All art in the slice is generated procedurally
 // in C++ (Source/Art) — 100% original IP, no external assets.
 #include "Core/Math.h"
+#include <cstdint>
 #include <functional>
 #include <map>
 #include <string>
