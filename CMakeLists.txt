@@ -130,4 +130,43 @@ if(INK_WITH_TESTS)
     add_test(NAME unit COMMAND inkbound-tests)
 endif()
 
+# TEMP CI probe: syntax-check every translation unit at configure time and
+# surface the first failure as check annotations (run only when not the app
+# build so we can read the GitHub Actions errors).
+if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
+    get_target_property(_ink_sdl_inc SDL2::SDL2 INTERFACE_INCLUDE_DIRECTORIES)
+    set(_probe_dirs
+        Core Physics AI Animation VFX
+        Gameplay Player Enemies Bosses Weapons Charms Levels World Save
+        Cinematics Progression Quests Dialogue
+        Art Audio Engine Input Rendering Tools UI Game)
+    if(INK_WITH_TESTS)
+        list(APPEND _probe_dirs Tests)
+    endif()
+    set(_probe_srcs "")
+    foreach(_d IN LISTS _probe_dirs)
+        file(GLOB _tmp ${CMAKE_SOURCE_DIR}/Source/${_d}/*.cpp)
+        list(APPEND _probe_srcs ${_tmp})
+    endforeach()
+    list(APPEND _probe_srcs ${CMAKE_SOURCE_DIR}/Source/Editor/main.cpp)
+    foreach(_src IN LISTS _probe_srcs)
+        execute_process(
+            COMMAND ${CMAKE_CXX_COMPILER} -std=c++20 -fsyntax-only
+                    -I${CMAKE_SOURCE_DIR}/Source -I${_ink_sdl_inc}
+                    -DINK_ASSERTS=1 -DINK_DEVTOOLS=1 ${_src}
+            RESULT_VARIABLE _probe_r
+            OUTPUT_VARIABLE _probe_o
+            ERROR_VARIABLE _probe_e)
+        if(NOT _probe_r EQUAL 0)
+            message("::error::PROBE-FAILED ${_src}")
+            string(REPLACE "\n" ";" _probe_lines "${_probe_e}${_probe_o}")
+            foreach(_probe_line IN LISTS _probe_lines)
+                message("::error::${_probe_line}")
+            endforeach()
+            break()
+        endif()
+    endforeach()
+    message("::error::PROBE-DONE")
+endif()
+
 message(STATUS "INKBOUND configured: SDL2 ${SDL2_VERSION}, flavour ${CMAKE_BUILD_TYPE}")
