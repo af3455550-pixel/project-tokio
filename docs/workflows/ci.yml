@@ -62,10 +62,10 @@ jobs:
           name: inkbound-windows-x64
           path: inkbound-windows-x64.zip
 
-      # Publish a GitHub release when triggered manually ("Run workflow"),
-      # so a ready-to-run .exe is always one click away.
+      # Publish a GitHub release so a ready-to-run .exe is always available
+      # (on every push to main, and on manual "Run workflow").
       - name: Create GitHub release
-        if: github.event_name == 'workflow_dispatch'
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
         run: |
           $tag = "windows-build-${{ github.run_number }}"
           gh release create $tag `
