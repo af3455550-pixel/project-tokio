@@ -3,6 +3,7 @@
 // RECOVER / STUNNED / DAMAGED / RETREAT / DEAD.
 // The brain owns state *transitions* (detection, reaction time, cooldowns);
 // concrete enemies own *behavior* inside each state (virtuals on Enemy).
+#include <algorithm>
 #include <string>
 
 namespace ink {

@@ -3,6 +3,8 @@
 // data in C++ (string grids for characters, primitives for tiles/bosses) —
 // 100% original IP, zero external assets (§3, §80).
 #include "Rendering/SpriteBank.h"
+#include <cstddef>
+#include <cstdint>
 #include <cmath>
 #include <cstdlib>
 #include <map>

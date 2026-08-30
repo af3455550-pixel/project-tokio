@@ -3,6 +3,7 @@
 // facing/velocity direction, dynamic zoom, boss framing, clamped bounds,
 // decaying screen shake (§13), optional cinematic letterbox framing.
 #include "Core/Math.h"
+#include <algorithm>
 
 namespace ink {
 

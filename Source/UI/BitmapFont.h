@@ -2,6 +2,7 @@
 // Original 5x7 pixel bitmap font (hand-designed for Inkbound, §51).
 // No external font assets. Uppercase A-Z, 0-9, and common punctuation.
 #include "Rendering/Renderer2D.h"
+#include <cstdint>
 #include <string>
 
 namespace ink {

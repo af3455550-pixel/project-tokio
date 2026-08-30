@@ -5,7 +5,9 @@
 #include "Animation/AnimRef.h"
 #include "Gameplay/Entity.h"
 namespace ink { struct SimContext; }
+#include <algorithm>
 #include <memory>
+#include <string>
 #include <vector>
 
 namespace ink {

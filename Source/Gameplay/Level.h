@@ -5,6 +5,7 @@
 #include "Gameplay/Entity.h"
 #include "Physics/Collision.h"
 #include <memory>
+#include <string>
 #include <vector>
 
 namespace ink {
