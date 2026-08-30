@@ -1,601 +1,241 @@
 <div align="center">
 
-# INKBOUND: THE LAST REEL
+# 🎬 INKBOUND: THE LAST REEL
 
-### THE LAST FRAME IS STILL ALIVE.
+### *"Quando a última bobina queimar, o mundo desenhado deixa de existir."*
 
-**A 2D ACTION ADVENTURE**
+**Um jogo 2D de ação, plataformas e boss-rush desenhado à mão, inspirado na animação
+americana dos anos 1930 — grão de película, tinta viva e jazz de fita rota.**
+
+[![Estado](https://img.shields.io/badge/estado-em%20desenvolvimento-c69e50?style=for-the-badge)]()
+[![Linguagem](https://img.shields.io/badge/C%2B%2B-17-8a6a4a?style=for-the-badge&logo=cplusplus&logoColor=white)]()
+[![Plataformas](https://img.shields.io/badge/plataformas-Windows%20%7C%20Linux%20%7C%20macOS-221a17?style=for-the-badge)]()
+[![Licença](https://img.shields.io/badge/licença-proprietária-9a4232?style=for-the-badge)]()
 
 </div>
 
 ---
 
-# 🎬 THE GAME
+## 📖 Sobre o jogo
 
-**INKBOUND: THE LAST REEL** é uma aventura 2D de ação passada dentro de uma antiga película de animação que ganhou vida.
+**INKBOUND: THE LAST REEL** passa-se em **Celluloid City**, uma metrópole de tinta e papel
+projetada 24 vezes por segundo. Quando uma entidade conhecida apenas como **O Apagador**
+começa a raspar personagens da película, a cidade começa a desaparecer quadro a quadro.
 
-Durante décadas, o mundo foi mantido vivo através de uma misteriosa tinta conhecida como **Living Ink**.
+Controlas o **Nib**, um pequeno cartoon com um chapéu em forma de aparo de caneta e um
+blaster de tinta, que atravessa seis regiões para recuperar as bobinas roubadas antes que
+a última se queime.
 
-Mas alguma coisa mudou.
+Combate rápido e preciso. Bosses longos e implacáveis. Dificuldade elevada, mas **sempre
+justa**: cada padrão é aprendível, cada morte é culpa tua, cada vitória é tua.
 
-As cores começaram a desaparecer.
-
-Personagens começaram a desaparecer.
-
-Cenários inteiros começaram a ser apagados.
-
-E agora a própria película está a morrer.
-
-No centro de tudo está uma figura conhecida apenas como:
-
-# THE DIRECTOR
-
-Ele não quer conquistar o mundo.
-
-Ele quer **apagá-lo**.
+> Todos os personagens, bosses, cenários, nomes, músicas e efeitos são **originais**.
+> A inspiração é a era dourada da animação (rotoscopia, *rubber hose*, *squash & stretch*),
+> não qualquer jogo específico.
 
 ---
 
-# ⭐ THE LAST HERO
+## ✨ Características
 
-## MILO INKWHISTLE
-
-Milo nunca foi criado para ser o herói.
-
-Era apenas uma pequena personagem esquecida numa das primeiras folhas da animação.
-
-Quando o resto do mundo começa a desaparecer, Milo descobre que possui algo que nenhuma outra personagem tem:
-
-**a capacidade de atravessar os frames da película.**
-
-Agora cabe-lhe atravessar seis mundos, enfrentar criaturas corrompidas e descobrir quem está realmente por detrás do desaparecimento do seu mundo.
-
----
-
-# 🌎 SIX WORLDS
-
-A aventura passa por seis grandes regiões.
-
-Cada mundo possui a sua própria atmosfera, personagens, perigos, música, segredos e grandes batalhas.
+- 🖌️ **Arte 100% desenhada à mão** — contornos expressivos, texturas de papel, grão de
+  película, *weave* de projetor e riscos autênticos de fita gasta.
+- 🎞️ **Animação frame-by-frame** com antecipação, *squash & stretch*, *follow-through* e
+  expressões faciais exageradas.
+- ⚔️ **Combate de precisão** — correr, saltar, dash aéreo, esquiva com *i-frames*,
+  disparo omnidirecional, ataque especial e **parry por timing** numa janela de 8 frames.
+- 👑 **12 bosses multifase**, cada um com introdução cinematográfica, personalidade,
+  tema musical exclusivo e derrota animada.
+- 🗺️ **6 mundos** com mapa interativo, níveis de plataforma, caminhos alternativos,
+  áreas escondidas, NPCs e colecionáveis.
+- 🎷 **Banda sonora original** de jazz e swing gravada com *big band*, com música
+  **dinâmica** que muda de arranjo conforme a fase do boss.
+- 📊 **Classificação por combate** (D a S+) com base em tempo, dano sofrido, parries
+  perfeitos e uso do especial.
+- 🕹️ Suporte total a **teclado e comando**, resolução adaptável e reinício instantâneo.
 
 ---
 
-## 🌾 WHISPERING MEADOWS
+## 👹 Galeria de Bosses
 
-Um campo aparentemente tranquilo.
-
-Flores gigantes.
-
-Moinhos antigos.
-
-Rios de tinta.
-
-Árvores que parecem observar cada movimento.
-
-Mas alguma coisa está errada.
-
-### THE BOSS
-
-**BARNABY THE HARVEST KING**
-
-Um enorme espantalho que transformou o campo no seu próprio reino.
+| # | Boss | Região | Conceito |
+|---|------|--------|----------|
+| 1 | **Rainha Zumbidora** | Prado de Mel-Ferrugem | Rainha-abelha mecânica de latão e cera |
+| 2 | **Mestre Borrão** | Circo Sem Nome | Mágico de circo feito de tinta derramada |
+| 3 | **Locomotiva Bufa-Fuligem** | Ramal Enferrujado | Comboio vivo que cospe carvão em brasa |
+| 4 | **Capitão Oito-Braços** | Enseada da Espuma | Polvo pirata com oito armas diferentes |
+| 5 | **Sr. Cordas** | Teatro dos Fios | Marioneta gigante que se manipula a si mesma |
+| 6 | **Vinca, o Dragão de Papel** | Templo Dobrado | Dragão de origami que se redobra ao levar dano |
+| 7 | **Tiquetaque Rachado** | Torre dos Ponteiros | Relógio monstruoso que rouba tempo ao jogador |
+| 8 | **A Mancha** | Poço de Tinta | Criatura amorfa nascida de erros apagados |
+| 9 | **Duo Fita & Cola** | Sala de Montagem | Dupla de editores que cortam o cenário ao vivo |
+| 10 | **Diva Fonógrafo** | Cabaré da Estática | Cantora de rádio cujas notas são projéteis |
+| 11 | **Projeccionista** | Cabine de Projeção | Servo do Apagador, muda o cenário à vontade |
+| 12 | **O APAGADOR** | A Última Bobina | Boss final em cinco fases, sem checkpoints |
 
 ---
 
-## 🎪 CARNIVAL OF CHAOS
+## 🎮 Controlos
 
-Um velho parque de diversões que nunca fechou.
-
-As luzes continuam acesas.
-
-As máquinas continuam a funcionar.
-
-E os espetáculos continuam...
-
-Mesmo quando ninguém está a assistir.
-
-### THE BOSS
-
-**RINGMASTER ROUX**
-
-O mestre do espetáculo.
-
-Ele controla o palco.
-
-E o palco controla tudo o resto.
+| Ação | Teclado | Comando |
+|------|---------|---------|
+| Mover | `A` `D` / setas | Stick esquerdo |
+| Apontar para cima | `W` / ↑ | Stick esquerdo ↑ |
+| Saltar | `Espaço` | A / Cross |
+| Disparar | `J` | X / Square |
+| Dash aéreo | `K` | RB / R1 |
+| Esquiva | `L` | LB / L1 |
+| Parry | `I` | Y / Triangle |
+| Ataque especial | `U` | B / Circle |
+| Pausa | `Esc` | Start |
+| Reinício rápido | `R` | — |
 
 ---
 
-## ⚓ BLACKWATER BAY
+## 🛠️ Compilar
 
-Uma cidade portuária coberta por nevoeiro.
+**Requisitos:** compilador com C++17, [raylib](https://www.raylib.com/) 5.x, CMake 3.16+.
 
-Navios abandonados.
+```bash
+git clone https://github.com/<o-teu-utilizador>/inkbound-the-last-reel.git
+cd inkbound-the-last-reel
+cmake -B build -DCMAKE_BUILD_TYPE=Release
+cmake --build build -j
+./build/inkbound
+```
 
-Um farol que nunca volta a acender.
+**Compilação direta (Linux):**
+```bash
+g++ -std=c++17 -O2 -Wall src/inkbound.cpp -o inkbound -lraylib -lm -ldl -lpthread -lGL -lX11
+```
 
-Criaturas escondidas debaixo da água.
-
-E algo gigantesco a mover-se no fundo do mar.
-
-### THE BOSS
-
-**ADMIRAL BRINE**
-
-Um velho capitão transformado numa criatura monstruosa pelas águas negras.
-
----
-
-## ⚙️ CLOCKWORK CITY
-
-Uma cidade construída à volta de uma gigantesca máquina.
-
-Comboios.
-
-Fábricas.
-
-Engrenagens.
-
-Chaminés.
-
-Máquinas que nunca param.
-
-Aqui, tudo funciona segundo um relógio.
-
-### THE BOSS
-
-**THE CLOCKMAKER**
-
-O homem que controla o tempo da cidade.
-
-E talvez consiga controlar o teu também.
+**Windows (MinGW-w64):**
+```bash
+g++ -std=c++17 -O2 -Wall src/inkbound.cpp -o inkbound.exe -lraylib -lopengl32 -lgdi32 -lwinmm
+```
 
 ---
 
-## 📜 PAPER KINGDOM
+## 🗂️ Arquitetura
 
-Um reino completamente feito de papel.
+Sistemas independentes, cada um editável sem tocar nos restantes:
 
-As casas dobram-se.
-
-As estradas mudam.
-
-As paredes podem desaparecer.
-
-E os próprios inimigos podem nascer de uma simples folha.
-
-### THE BOSS
-
-**QUEEN FOLDRA**
-
-A rainha de um reino onde nada permanece igual durante muito tempo.
-
----
-
-## 🕳️ THE BROKEN FRAME
-
-O último mundo.
-
-Aqui a película começa finalmente a quebrar.
-
-Os cenários desaparecem.
-
-As personagens ficam incompletas.
-
-As animações repetem-se.
-
-A música começa a falhar.
-
-As regras do mundo deixam de fazer sentido.
-
-E Milo finalmente encontra quem estava por detrás de tudo.
-
-### THE FINAL BOSS
-
-# THE DIRECTOR
+```
+PlayerController   movimento, dash, esquiva, parry, estados do herói
+CombatSystem       hitboxes, dano, i-frames, hitstop, knockback
+EnemySystem        FSM: IDLE → PATROL → ALERT → ATTACK → RECOVER → DEFEATED
+BossSystem         máquinas de estados por fase, transições e cinemáticas
+AnimationSystem    clips frame-by-frame, squash & stretch, easing
+AudioSystem        mixer, música dinâmica por fase, SFX cartoon
+SaveSystem         perfis, progresso, classificações, colecionáveis
+UIManager          menus, HUD, mapa, inventário, resultados
+DialogueSystem     diálogos typewriter, retratos, cenas
+LevelManager       tilemaps, checkpoints, parallax, segredos
+CameraController   follow com lookahead, shake, clamp, enquadramento de boss
+```
 
 ---
 
-# 💥 THE ACTION
-
-INKBOUND foi criado para ser rápido, preciso e desafiante.
-
-Milo pode:
-
-- Correr
-- Saltar
-- Fazer dash
-- Fazer air dash
-- Disparar
-- Utilizar diferentes armas
-- Fazer ataques especiais
-- Fazer parry
-- Esquivar-se
-- Combinar ataques
-- Utilizar poderes especiais
-
-Cada inimigo possui comportamentos próprios.
-
-Cada boss possui padrões diferentes.
-
-E cada batalha conta uma história.
-
----
-
-# ⚔️ THE BOSSES
-
-Os bosses são uma das partes mais importantes da experiência.
-
-Não são apenas inimigos grandes.
-
-São **espetáculos completos**.
-
-Cada boss possui:
-
-- Entrada cinematográfica
-- Arena própria
-- Música própria
-- Ataques únicos
-- Diferentes fases
-- Transformações
-- Ataques especiais
-- Eventos durante a batalha
-- Animações de derrota
-
-O objetivo é fazer cada batalha parecer um pequeno filme.
-
----
-
-# 👹 THE ENEMIES
-
-O mundo está cheio de criaturas criadas a partir da Living Ink.
-
-Existem:
-
-- Criaturas pequenas
-- Soldados
-- Criaturas voadoras
-- Monstros gigantes
-- Inimigos à distância
-- Criaturas mecânicas
-- Criaturas marinhas
-- Criaturas de papel
-- Inimigos corrompidos
-- Criaturas especiais
-
-Cada região introduz novos inimigos e novas formas de jogar.
-
----
-
-# 🔫 THE WEAPONS
-
-Milo poderá encontrar diferentes armas durante a aventura.
-
-Cada uma possui um estilo próprio.
-
-Algumas são rápidas.
-
-Outras causam mais dano.
-
-Algumas conseguem atravessar inimigos.
-
-Outras podem atingir vários alvos.
-
-A escolha da arma muda a forma como cada jogador enfrenta os desafios.
-
----
-
-# 🧿 CHARMS
-
-Ao longo da aventura, Milo encontra objetos especiais chamados **Charms**.
-
-Os Charms alteram determinadas características do personagem.
-
-Por exemplo:
-
-### GLASS SOUL
-
-Mais poder de ataque.
-
-Menos resistência.
-
-### SWIFT STEP
-
-Movimento mais rápido.
-
-### HEAVY INK
-
-Ataques com maior impacto.
-
-### PAPER WINGS
-
-Melhor controlo no ar.
-
-### ECHO HEART
-
-Recompensa sequências de ataques bem executadas.
-
-O jogador pode criar diferentes combinações.
-
----
-
-# 💗 SURVIVAL
-
-A aventura não será fácil.
-
-Milo possui uma quantidade limitada de vida.
-
-Os jogadores terão de aprender os padrões dos inimigos, dominar o movimento e utilizar corretamente o dash e o parry.
-
-Morrer faz parte da aprendizagem.
-
-Cada tentativa aproxima o jogador da vitória.
-
----
-
-# 🏆 BOSS RUSH
-
-Depois de dominar a aventura principal, os jogadores poderão enfrentar os bosses consecutivamente.
-
-O objetivo:
-
-**Derrotá-los o mais rapidamente possível.**
-
-O modo acompanha:
-
-- Tempo total
-- Tempo por boss
-- Dano recebido
-- Performance
-- Ranking
-
----
-
-# 💀 NIGHTMARE MODE
-
-Para quem quer algo ainda mais difícil.
-
-**Nightmare Mode** aumenta a dificuldade da aventura.
-
-Os inimigos tornam-se mais agressivos.
-
-Os bosses ganham novos padrões.
-
-Os ataques tornam-se mais rápidos.
-
-E alguns encontros podem revelar novas surpresas.
-
----
-
-# ⏱️ SPEEDRUN
-
-Os jogadores podem tentar completar a aventura no menor tempo possível.
-
-O jogo acompanha os melhores tempos e permite competir contra os próprios records.
-
-Apenas tu.
-
-A película.
-
-E o relógio.
-
----
-
-# 🕵️ THE SECRETS
-
-O mundo está cheio de coisas escondidas.
-
-Existem:
-
-- Áreas secretas
-- Personagens escondidas
-- Colecionáveis
-- Filmes perdidos
-- Objetos misteriosos
-- Salas secretas
-- Bosses secretos
-- Eventos escondidos
-
-Alguns segredos podem revelar partes da verdadeira história.
-
----
-
-# 🎞️ THE ANIMATION
-
-O mundo de INKBOUND é construído à volta da ideia de uma animação antiga que ganhou vida.
-
-Os personagens possuem movimentos exagerados.
-
-As expressões mudam rapidamente.
-
-Os ataques possuem grandes impactos.
-
-Os cenários podem transformar-se durante uma batalha.
-
-Tudo deve parecer desenhado à mão e animado frame a frame.
-
----
-
-# 🎵 THE SOUND
-
-A música acompanha a personalidade de cada mundo.
-
-A direção musical mistura:
-
-- Jazz
-- Swing
-- Ragtime
-- Blues
-- Big Band
-- Orquestra
-- Música de animação clássica
-
-Cada boss possui a sua própria música.
-
-Durante determinadas batalhas, a música pode mudar quando o boss entra numa nova fase.
-
----
-
-# 🎭 THE CHARACTERS
-
-O mundo de INKBOUND é habitado por dezenas de personagens.
-
-Algumas ajudam Milo.
-
-Outras querem impedir o seu progresso.
-
-E algumas podem simplesmente estar a esconder a verdade.
-
-Existem:
-
-**20+ NPCs**
-
-Cada um com a sua própria personalidade, história e ligação ao mundo.
-
----
-
-# 📖 THE STORY
-
-A história começa simples.
-
-Um personagem.
-
-Um mundo.
-
-Uma película a desaparecer.
-
-Mas à medida que Milo recupera os **Six Master Frames**, começa a descobrir que a história que lhe contaram pode não ser verdadeira.
-
-O mundo não está simplesmente a morrer.
-
-**Alguém está a fazê-lo desaparecer.**
-
-E quanto mais Milo se aproxima da verdade...
-
-...mais percebe que talvez o mundo nunca tenha sido aquilo que parecia.
-
----
-
-# 🎞️ THE SIX MASTER FRAMES
-
-Existem seis frames especiais escondidos pelos mundos.
-
-Cada um representa uma parte da película original.
-
-Encontrá-los todos desbloqueia novas partes da história.
-
-E pode revelar a verdadeira origem da Living Ink.
-
----
-
-# 👁️ THE DIRECTOR
-
-Durante grande parte da aventura, The Director é apenas uma presença.
-
-Uma sombra.
-
-Uma voz.
-
-Uma figura observando através dos frames.
-
-Ele aparece nos momentos certos.
-
-Muda partes do mundo.
-
-Manipula personagens.
-
-E sabe coisas que Milo nunca deveria saber.
-
-No final, Milo descobre a verdade.
-
-E começa a última batalha.
-
----
-
-# 🎬 THE FINAL REEL
-
-O mundo está quase completamente apagado.
-
-Os seis Master Frames estão reunidos.
-
-A película está a falhar.
-
-Milo chega ao último cenário.
-
-Não existe mais nenhum lugar para fugir.
-
-Não existe outro frame.
-
-Não existe outra oportunidade.
-
-Só resta uma coisa:
-
-# PRESS PLAY.
-
----
-
-# 📊 THE WORLD OF INKBOUND
-
-| CONTEÚDO | QUANTIDADE |
-|---|---:|
-| 🌎 Mundos | 6 |
-| 🎮 Níveis | 25+ |
-| 👑 Bosses | 18+ |
-| 👹 Mini-Bosses | 12+ |
-| 👾 Inimigos | 50+ |
-| 🔫 Armas | 12+ |
-| 🧿 Charms | 25+ |
-| 🧑 NPCs | 20+ |
-| 🏆 Achievements | 50+ |
-| 🎬 Finais | 3+ |
-| 💾 Save Slots | 3 |
-
----
-
-# 🎯 THE EXPERIENCE
-
-INKBOUND não é apenas sobre chegar ao fim.
-
-É sobre aprender.
-
-Falhar.
-
-Tentar novamente.
-
-Descobrir um novo caminho.
-
-Encontrar um segredo.
-
-Derrotar aquele boss que parecia impossível.
-
-E finalmente perceber:
-
-**tu já sabias como fazê-lo.**
-
----
-
-# 🎞️ THE LAST FRAME
-
-A película está a acabar.
-
-Os personagens estão a desaparecer.
-
-O mundo está a ficar preto.
-
-Mas uma personagem continua de pé.
-
-Milo olha para o último frame.
-
-E dá um passo em frente.
+## 🗺️ Roadmap
+
+- [x] Fase 1 — Núcleo: movimento, combate, câmara, render de película
+- [x] Fase 2 — EnemySystem e primeiro boss
+- [ ] Fase 3 — Os 12 bosses completos
+- [ ] Fase 4 — Os 6 mundos e mapa interativo
+- [ ] Fase 5 — Narrativa, cinemáticas e final secreto
+- [ ] Fase 6 — Polimento, acessibilidade e localização
 
 ---
 
 <div align="center">
 
-# INKBOUND: THE LAST REEL
+# 🎩 CRÉDITOS
 
-### THE LAST FRAME IS STILL ALIVE.
+### *INKBOUND: THE LAST REEL*
+**Produzido por FIRE STATE STUDIOS**
 
-**THE END IS ONLY THE BEGINNING.**
+</div>
+
+---
+
+### DIREÇÃO
+
+| | |
+|---|---|
+| **Game Director** | Aurélio "Rell" Vasconcelos |
+| **Creative Director** | Marisol Duquesne |
+| **Technical Director** | Ivan Kolarov |
+
+### ENGENHARIA
+
+| | |
+|---|---|
+| **Lead C++ Programmer** | Tobias Reinhardt-Vale |
+| **Gameplay Programmer** | Emiko Tanabe |
+| **Engine Programmer** | Casimir Andrzejak |
+| **AI Programmer** | Nadia Fontaine-Aro |
+| **2D Rendering Engineer** | Rustam Belaïd |
+| **Physics Engineer** | Gwen Halloran |
+| **Tools Programmer** | Dmitri Sallowbrook |
+| **Performance Engineer** | Priya Ramanathan |
+| **Build Engineer** | Oskar Lindqvist |
+
+### DESIGN
+
+| | |
+|---|---|
+| **Level Designer** | Hugo Marcanti |
+| **Boss Designer** | Selma Okonkwo |
+| **Character Designer** | Léo Batiste-Marchand |
+| **UI/UX Designer** | Yara Solheim |
+| **Narrative Designer** | Constance "Connie" Ferrow |
+
+### ARTE E ANIMAÇÃO
+
+| | |
+|---|---|
+| **2D Animator** | Rosalie Vantongeren |
+| **2D Animator** | Kenji Amagawa |
+| **VFX Artist** | Bruno Falqueiro |
+| **Technical Artist** | Anka Petrescu |
+
+### ÁUDIO
+
+| | |
+|---|---|
+| **Sound Designer** | Théo Bramwell |
+| **Composer** | Vivienne "Viv" Ashcombe |
+| **Orquestração de metais** | The Copperline Eight |
+
+### QUALIDADE
+
+| | |
+|---|---|
+| **QA Engineer** | Samir Oyelaran |
+| **QA Engineer** | Iolanda Crest |
+
+---
+
+<div align="center">
+
+### AGRADECIMENTOS ESPECIAIS
+
+Às famílias e amigos de toda a equipa, que aguentaram três anos de conversas
+sobre a curvatura correta de uma linha de tinta.
+
+Aos animadores anónimos dos anos 1930, que desenharam um quadro de cada vez
+sem saber que estavam a inventar uma linguagem.
+
+E a ti, que estás a ler os créditos.
+
+---
+
+**© 2026 Fire State Studios. Todos os direitos reservados.**
+
+*Inkbound: The Last Reel, Celluloid City, Nib, O Apagador e todos os personagens,
+nomes e composições são marcas e obras originais da Fire State Studios.*
+
+*Nenhuma bobina foi realmente queimada durante a produção.*
+
+**🎬 FIM DA BOBINA 🎬**
 
 </div>
