@@ -4,13 +4,13 @@ on:
   push:
     branches: [main]
   pull_request:
-  # Manual trigger to produce (and publish) the Windows .exe release.
   workflow_dispatch:
 
 jobs:
-  # ---------------------------------------------------------------- Linux ----
   linux:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4
       - name: Install dependencies
@@ -24,28 +24,24 @@ jobs:
       - name: Unit tests
         run: ctest --test-dir build --output-on-failure
 
-  # -------------------------------------------------------------- Windows ----
   windows-x64:
     runs-on: windows-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
-
       - name: Install SDL2 via vcpkg
-        run: |
-          C:\vcpkg\vcpkg install sdl2:x64-windows
+        run: C:\vcpkg\vcpkg install sdl2:x64-windows
         shell: cmd
-
       - name: Configure (Release, x64)
         run: >
-          cmake -B build -G "Visual Studio 17 2022" -A x64
+          cmake -B build -G "Visual Studio 18 2026" -A x64
           -DCMAKE_BUILD_TYPE=Release
           -DINK_SDL2_PREFIX=C:/vcpkg/installed/x64-windows
         shell: cmd
-
       - name: Build
         run: cmake --build build --config Release
         shell: cmd
-
       - name: Package exe + assets
         run: |
           $out = "dist\inkbound-windows-x64"
@@ -55,20 +51,16 @@ jobs:
           Copy-Item C:\vcpkg\installed\x64-windows\bin\SDL2.dll $out
           Compress-Archive -Path $out -DestinationPath inkbound-windows-x64.zip
         shell: pwsh
-
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: inkbound-windows-x64
           path: inkbound-windows-x64.zip
-
-      # Publish a GitHub release so a ready-to-run .exe is always available
-      # (on every push to main, and on manual "Run workflow").
       - name: Create GitHub release
         if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
         run: |
           $tag = "windows-build-${{ github.run_number }}"
-          gh release create $tag `
+          gh release create --force $tag `
             --title "Inkbound: The Last Reel - Windows x64 ($tag)" `
             --notes "Build ${{ github.run_number }} - Windows x64. Extract and run inkbound.exe with the Assets folder beside it." `
             inkbound-windows-x64.zip
