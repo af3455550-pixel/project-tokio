@@ -3,6 +3,7 @@
 // Conditions are evaluated off GameEvents + a small counter snapshot, so new
 // condition types are cheap to add.
 #include "Gameplay/GameEvent.h"
+#include <algorithm>
 #include <string>
 #include <vector>
 

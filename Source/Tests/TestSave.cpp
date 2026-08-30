@@ -2,10 +2,10 @@
 #include "Save/SaveSystem.h"
 #include "Test.h"
 
+#include <chrono>
 #include <cstdlib>
 #include <filesystem>
 #include <fstream>
-#include <unistd.h>
 
 using namespace ink;
 
@@ -13,11 +13,21 @@ namespace fs = std::filesystem;
 
 namespace {
 std::string TempSaveDir() {
-    std::string dir = "inktest_saves_" + std::to_string(::getpid());
+    // Portable unique name (no getpid(): not available on MSVC).
+    const auto now = std::chrono::steady_clock::now().time_since_epoch().count();
+    std::string dir = "inktest_saves_" + std::to_string(static_cast<long long>(now));
     std::error_code ec;
     fs::remove_all(dir, ec);
     fs::create_directories(dir, ec);
     return dir;
+}
+
+void SetSaveDir(const std::string& dir) {
+#ifdef _WIN32
+    _putenv_s("INK_SAVEDIR", dir.c_str());
+#else
+    setenv("INK_SAVEDIR", dir.c_str(), 1);
+#endif
 }
 
 GameProgress MakeProgress() {
@@ -44,7 +54,7 @@ GameProgress MakeProgress() {
 } // namespace
 
 INK_TEST(save_roundtrip) {
-    setenv("INK_SAVEDIR", TempSaveDir().c_str(), 1);
+    SetSaveDir(TempSaveDir());
     SaveSystem s;
     std::string err;
     GameProgress in = MakeProgress();
@@ -69,7 +79,7 @@ INK_TEST(save_roundtrip) {
 }
 
 INK_TEST(save_corruption_rejected) {
-    setenv("INK_SAVEDIR", TempSaveDir().c_str(), 1);
+    SetSaveDir(TempSaveDir());
     SaveSystem s;
     std::string err;
     GameProgress in = MakeProgress();
@@ -98,7 +108,7 @@ INK_TEST(save_corruption_rejected) {
 }
 
 INK_TEST(save_latest_slot) {
-    setenv("INK_SAVEDIR", TempSaveDir().c_str(), 1);
+    SetSaveDir(TempSaveDir());
     SaveSystem s;
     std::string err;
     GameProgress in = MakeProgress();

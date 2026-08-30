@@ -17,7 +17,7 @@ early-20th-century cartoon world where living ink is drying up. Written in
 
 ## Requirements
 
-- C++20 compiler (MSVC 2022, GCC 11+, Clang 14+)
+- C++20 compiler (MSVC 2022/2026, GCC 11+, Clang 14+)
 - CMake ≥ 3.16
 - SDL2 ≥ 2.26 (development)
 
@@ -28,7 +28,7 @@ early-20th-century cartoon world where living ink is drying up. Written in
 ```bat
 :: SDL2 via vcpkg (or set INK_SDL2_PREFIX to any SDL2 install)
 C:\vcpkg\vcpkg install sdl2:x64-windows
-cmake -B build -G "Visual Studio 17 2022" -A x64 -DCMAKE_BUILD_TYPE=Release -DINK_SDL2_PREFIX=C:/vcpkg/installed/x64-windows
+cmake -B build -G "Visual Studio 18 2026" -A x64 -DCMAKE_BUILD_TYPE=Release -DINK_SDL2_PREFIX=C:/vcpkg/installed/x64-windows
 cmake --build build --config Release
 ```
 

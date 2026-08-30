@@ -16,6 +16,7 @@
 #include "Enemies/EnemyBook.h"
 #include "Engine/Application.h"
 #include "Gameplay/GameEvent.h"
+#include <utility>
 #include "Gameplay/Level.h"
 #include "Gameplay/Projectile.h"
 #include "Gameplay/SimContext.h"

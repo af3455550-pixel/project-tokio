@@ -1,7 +1,9 @@
 #pragma once
 // Tiny synchronous event bus. Gameplay emits; systems subscribe.
 // Synchronous on the game thread keeps the simulation deterministic (§76).
+#include <cstddef>
 #include <functional>
+#include <utility>
 #include <vector>
 
 namespace ink {

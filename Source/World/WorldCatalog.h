@@ -4,6 +4,7 @@
 // world 1 fully; the other five are registered so progression, map and
 // localisation systems already see the complete structure.
 #include "Core/Json.h"
+#include <cstdint>
 #include <string>
 #include <vector>
 

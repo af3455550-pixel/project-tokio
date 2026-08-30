@@ -25,10 +25,15 @@ set_property(CACHE CMAKE_BUILD_TYPE PROPERTY STRINGS Debug Development Release S
 
 # Per-flavour flags (single-config generators use CMAKE_BUILD_TYPE;
 # multi-config generators such as Visual Studio use the standard configs).
-set(CMAKE_CXX_FLAGS_DEBUG        "-O0 -g3")
-set(CMAKE_CXX_FLAGS_DEVELOPMENT  "-O2 -g")
-set(CMAKE_CXX_FLAGS_RELEASE      "-O2")
-set(CMAKE_CXX_FLAGS_SHIPPING     "-O3")
+if(MSVC)
+    # MSVC uses its own optimized/Debug defaults (/O2, /Zi); keep them.
+    set(CMAKE_CXX_FLAGS_RELEASE "")
+else()
+    set(CMAKE_CXX_FLAGS_DEBUG        "-O0 -g3")
+    set(CMAKE_CXX_FLAGS_DEVELOPMENT  "-O2 -g")
+    set(CMAKE_CXX_FLAGS_RELEASE      "-O2")
+    set(CMAKE_CXX_FLAGS_SHIPPING     "-O3")
+endif()
 
 if(MSVC)
     add_compile_options(/W4 /permissive- /Zc:__cplusplus)
@@ -124,5 +129,6 @@ if(INK_WITH_TESTS)
     target_compile_definitions(inkbound-tests PRIVATE ${INK_FLAVOUR_DEFS})
     add_test(NAME unit COMMAND inkbound-tests)
 endif()
+
 
 message(STATUS "INKBOUND configured: SDL2 ${SDL2_VERSION}, flavour ${CMAKE_BUILD_TYPE}")

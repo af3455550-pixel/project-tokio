@@ -3,6 +3,7 @@
 // the camera; UI draws are in screen space. Sprites are blitted from a
 // sprite atlas with nearest filtering; tinting and alpha are per-draw (§8).
 #include "Core/Math.h"
+#include <cstdint>
 #include "Rendering/Camera2D.h"
 #include <map>
 #include <string>

@@ -2,6 +2,7 @@
 // NPC dialogue (§38, §60): data-driven lines + a typewriter playback player.
 // Pure logic; the app draws the box (UI).
 #include <algorithm>
+#include <utility>
 #include <string>
 #include <vector>
 
