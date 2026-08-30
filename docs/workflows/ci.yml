@@ -75,7 +75,7 @@ jobs:
         if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
         run: |
           $tag = "windows-build-${{ github.run_number }}"
-          gh release create $tag `
+          gh release create --force $tag `
             --title "Inkbound: The Last Reel - Windows x64 ($tag)" `
             --notes "Build ${{ github.run_number }} - Windows x64. Extract and run inkbound.exe with the Assets folder beside it." `
             inkbound-windows-x64.zip

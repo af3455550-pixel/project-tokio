@@ -19,6 +19,14 @@ struct SpriteFrame {
 // Atlas-space rect (double precision, converts to Rect for the renderer).
 struct RectF {
     double x = 0.0, y = 0.0, w = 0.0, h = 0.0;
+
+    RectF() = default;
+    // See Math.h Vec2: avoids narrowing diagnostics for integer arguments.
+    template <typename Tx, typename Ty, typename Tw, typename Th>
+    RectF(Tx x_, Ty y_, Tw w_, Th h_)
+        : x(static_cast<double>(x_)), y(static_cast<double>(y_)),
+          w(static_cast<double>(w_)), h(static_cast<double>(h_)) {}
+
     operator Rect() const { return Rect{x, y, w, h}; }
 };
 

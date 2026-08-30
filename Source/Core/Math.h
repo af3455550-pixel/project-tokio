@@ -10,7 +10,10 @@ struct Vec2 {
     double y = 0.0;
 
     Vec2() = default;
-    Vec2(double x_, double y_) : x(x_), y(y_) {}
+    // Templated so braced list-init with integers is not a narrowing
+    // conversion (GCC: -Wnarrowing; MSVC: hard error C2397).
+    template <typename Tx, typename Ty>
+    Vec2(Tx x_, Ty y_) : x(static_cast<double>(x_)), y(static_cast<double>(y_)) {}
 
     Vec2 operator+(const Vec2& o) const { return {x + o.x, y + o.y}; }
     Vec2 operator-(const Vec2& o) const { return {x - o.x, y - o.y}; }
@@ -38,7 +41,11 @@ struct Rect {
     double x = 0.0, y = 0.0, w = 0.0, h = 0.0;
 
     Rect() = default;
-    Rect(double x_, double y_, double w_, double h_) : x(x_), y(y_), w(w_), h(h_) {}
+    // See Vec2: avoids narrowing diagnostics for integer arguments.
+    template <typename Tx, typename Ty, typename Tw, typename Th>
+    Rect(Tx x_, Ty y_, Tw w_, Th h_)
+        : x(static_cast<double>(x_)), y(static_cast<double>(y_)),
+          w(static_cast<double>(w_)), h(static_cast<double>(h_)) {}
 
     double Left() const { return x; }
     double Right() const { return x + w; }
