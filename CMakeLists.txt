@@ -14,6 +14,7 @@ cmake_minimum_required(VERSION 3.16)
 project(inkbound VERSION 0.1.0 LANGUAGES C CXX)
 
 # TEMP diagnostics probe (removed before final)
+message("::error::WINPROBE cmake=${CMAKE_VERSION}")
 message("::error::PROBE-CONFIG cmake=${CMAKE_VERSION} gen=${CMAKE_GENERATOR} id=${CMAKE_CXX_COMPILER_ID} ver=${CMAKE_CXX_COMPILER_VERSION} os=${CMAKE_SYSTEM_NAME} proc=${CMAKE_SYSTEM_PROCESSOR}")
 message("::error::PROBE-FLAVORS cfgtypes=${CMAKE_CONFIGURATION_TYPES} buildtype=${CMAKE_BUILD_TYPE}")
 
