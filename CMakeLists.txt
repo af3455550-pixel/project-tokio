@@ -114,7 +114,10 @@ add_executable(inkbound
     ${CMAKE_SOURCE_DIR}/Source/Game/Game.cpp
     ${CMAKE_SOURCE_DIR}/Source/Game/main.cpp
 )
-target_link_libraries(inkbound PRIVATE inkgame SDL2::SDL2)
+# On Windows, SDL headers redefine `main` to `SDL_main` (SDL_MAIN_AVAILABLE);
+# SDL2main provides the real entry point (WinMain/main) that calls it, so link
+# it when the imported target exists (vcpkg exports it; no-op on Linux/macOS).
+target_link_libraries(inkbound PRIVATE inkgame $<TARGET_NAME_IF_EXISTS:SDL2::SDL2main> SDL2::SDL2)
 target_compile_definitions(inkbound PRIVATE ${INK_FLAVOUR_DEFS})
 
 # --- Tests -------------------------------------------------------------------

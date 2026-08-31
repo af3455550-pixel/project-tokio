@@ -2,6 +2,7 @@
 #include "Core/Log.h"
 #include <SDL2/SDL.h>
 #include <chrono>
+#include <cstdint>  // uint32_t
 #include <cmath>
 #include <cstdio>
 
