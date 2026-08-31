@@ -1,5 +1,7 @@
 #include "UI/Screens.h"
+#include <algorithm>  // std::min (MSVC does not include it transitively)
 #include <cmath>
+#include <cstdint>    // uint32_t
 #include <cstdio>
 
 namespace ink {

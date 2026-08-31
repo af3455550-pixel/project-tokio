@@ -1,5 +1,6 @@
 #include "Charms/CharmDef.h"
 #include "Core/Json.h"
+#include <algorithm>  // std::max (MSVC does not include it transitively)
 
 namespace ink {
 
